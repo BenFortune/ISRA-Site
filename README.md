@@ -1,3 +1,3 @@
 # Iowa Street Rod Association Website
 
-Copy of the ISRA Site
+Work in progress of the ISRA Site Redesign

@@ -1,0 +1,168 @@
+/*@import './partials/_nav.scss';*/
+
+body { font-family: Sans-Serif; color: #333; font-size: 18px; list-style-type: none;}
+/* font-family: Sans-Serif; */
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.isra-header { margin-top: 30px; height: 125px; }
+.isra-header a { float:left; }
+.isra-header h1 { margin-left: 204px; }
+
+.navbar-default { margin-top: 15px; min-height: 25px; font-size: 15px;}
+
+.tagline {
+    margin-left: 204px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+.nav>li:first-child>a {
+    padding-left: 0;
+}
+.isra-homepage-info-section {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../goodguys-shot.jpg");
+    background-position: 0 -175px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-mask {
+    margin-top: 50px;
+    padding: 25px 50px;
+    height: 500px;
+    min-height: 500px;
+    background-color: #333;
+    color: #E9E9E9;
+    opacity: .8
+}
+
+.isra-events-section {
+    padding-top: 30px;
+    padding-bottom: 48px;
+    border-top: 2px solid #CCC;
+    border-bottom: 2px solid #CCC;
+}
+
+/*.isra-events-section .col-sm-12 {
+    padding-left: 0;
+}*/
+
+/*.isra-events-section .container .row {
+    margin: 0;
+    padding: 0;
+}*/
+
+/*.isra-events-section .container .col-sm-12 {
+    margin: 0;
+    padding: 0;
+}*/
+
+.isra-events-section .container .col-sm-12 ul {
+    /*padding-left: 0;*/
+    list-style-type: none;
+}
+
+.isra-events-section .container .col-sm-12 li {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.isra-rides-gallery {
+    position: relative;
+    height: 800px;
+    max-height: 800px;
+    background: #EEE none;
+}
+
+.isra-rides-gallery .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.isra-rides-gallery h2 {
+    margin: 0;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 9999;
+    font-family: sans-serif;
+    font-weight: 100;
+    /*color: #800;*/
+    color: #FFFF00;
+    background-color: #666;
+    opacity: .8;
+}
+
+.isra-rides-gallery h2 span {
+    /*color: #FFFF00;*/
+    /*color: #EEE;*/
+}
+
+.isra-rides-gallery button {
+    margin-top: 300px;
+    padding: 10px;
+    font-size: 28px;
+    position: relative;
+    z-index: 8888;
+    color: #FFF;
+    background: #666 none;
+    opacity: .8;
+}
+
+.isra-rides-gallery button:hover, .isra-rides-gallery button:focus {
+    margin-top: 300px;
+    padding: 10px;
+    font-size: 28px;
+    position: relative;
+    z-index: 8888;
+    color: #FFF;
+    text-decoration: none;
+    background: #666 none;
+    opacity: .8;
+    outline: none;
+}
+
+.isra-rides-gallery ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.isra-rides-gallery ul li {
+    display: none;
+}
+
+.isra-rides-gallery ul li.active {
+    display: block;
+}
+
+.isra-rides-gallery img {
+    max-height: 700px;
+}
+
+.isra-footer {
+    height: 90px;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #999;
+    background: #333 none;
+}
+
+.isra-footer .isra-logo {
+    max-height: 50px;
+}
