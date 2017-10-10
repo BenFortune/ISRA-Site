@@ -8,7 +8,7 @@
   },
   "repository": "https://github.com/BenFortune/ISRA-Site",
   "author": "Ben Fortune",
-  "email": "ben.fortune@gmail.com"
+  "email": "ben.fortune@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^3.3.7",
