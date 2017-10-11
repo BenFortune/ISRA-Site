@@ -1,6 +1,6 @@
 'use strict';
 
-// SETTING IMAGE VARIABLES 
+// SETTING IMAGE VARIABLES
 var imageNumber = 0;
 var imageGallery = $('.isra-rides-gallery ul li');
 var imageCount = imageGallery.length;
@@ -20,7 +20,6 @@ function moveImgLeft() {
 }
 
 function verifyWithinBounds(imageNumber) {
-    console.log('verifyWithinBounds called image number', imageNumber);
     if (imageNumber === imageCount) {
         goToBeginning();
     } else if (imageNumber < 0) {
@@ -28,7 +27,6 @@ function verifyWithinBounds(imageNumber) {
         moveImage(number);
         decrementImageNumber(number + 1);
     } else {
-        console.log('do what you do');
         moveImage(imageNumber);
     }
 }
@@ -40,7 +38,6 @@ function goToBeginning() {
 }
 
 function moveImage(imageNumber) {
-    console.log('imageNumber called, image number is', imageNumber);
     $(imageGallery).removeClass('active');
     $(imageGallery[imageNumber]).addClass('active');
 }

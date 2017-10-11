@@ -19,12 +19,15 @@ ul {
 
 .isra-header { margin-top: 30px; height: 125px; }
 .isra-header a { float:left; }
-.isra-header h1 { margin-left: 204px; }
+.isra-header h1 { margin-left: 204px; margin-top: 25px; margin-bottom: 0; color: #A1241E; font-family: Sans-Serif; font-weight: bold;}
 
 .navbar-default { margin-top: 15px; min-height: 25px; font-size: 15px;}
 
 .tagline {
     margin-left: 204px;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 100;
 }
 
 .subheader {
@@ -40,7 +43,7 @@ ul {
   padding-right: 0;
 }
 
-.isra-homepage-info-section {
+.isra-homepage-info-section, .isra-goodguys {
     position: relative;
     height: 600px;
     min-height: 600px;
@@ -50,7 +53,7 @@ ul {
     background-size:100% auto;
 }
 
-.isra-homepage-info-section h2 {
+.isra-homepage-info-section h2, .isra-goodguys h2 {
     margin-top: 0;
     color: #FC0;
     font-family: 'Racing Sans One', sans-serif;
@@ -177,21 +180,25 @@ ul {
     margin-top: 10px;
 }
 
-.isra-contact-form {
+.isra-form {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.isra-contact-form form {
+.isra-form form {
     margin-top: 50px;
 }
 
-.isra-contact-form .form-group {
+.isra-form.membership form {
+    margin-top: 30px;
+}
+
+.isra-form .form-group {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.isra-contact-form .form-group label {
+.isra-form .form-group label {
     color: #AE2626;
 }
 
