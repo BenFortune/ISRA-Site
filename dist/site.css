@@ -1,5 +1,6 @@
 /*@import './partials/_nav.scss';*/
 
+/* GLOBAL STYLING */
 body { font-family: Sans-Serif; color: #333; font-size: 18px; list-style-type: none;}
 /* font-family: Sans-Serif; */
 
@@ -43,7 +44,8 @@ ul {
   padding-right: 0;
 }
 
-.isra-homepage-info-section, .isra-goodguys {
+/* ISRA HOMEPAGE STYLING */
+.isra-homepage-info-section {
     position: relative;
     height: 600px;
     min-height: 600px;
@@ -53,7 +55,27 @@ ul {
     background-size:100% auto;
 }
 
-.isra-homepage-info-section h2, .isra-goodguys h2 {
+.isra-goodguys {
+    position: relative;
+    height: 800px;
+    min-height: 800px;
+    background-image: url("../goodguys-shot-2.jpg");
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-history {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../goodguys-shot-3.jpg");
+    background-position: 0 -175px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-homepage-info-section h2, .isra-goodguys h2, .isra-history h2 {
     margin-top: 0;
     color: #FC0;
     font-family: 'Racing Sans One', sans-serif;
@@ -70,6 +92,7 @@ ul {
     opacity: .8
 }
 
+/* ISRA HOMEPAGE EVENTS STYLING */
 .isra-events-section {
     padding-top: 30px;
     padding-bottom: 48px;
@@ -86,6 +109,7 @@ ul {
     margin-bottom: 30px;
 }
 
+/* ISRA HOMEPAGE RIDES GALLERY */
 .isra-rides-gallery {
     position: relative;
     height: 800px;
@@ -156,6 +180,7 @@ ul {
     margin-bottom: 40px;
 }
 
+/* ISRA FOOTER STYLING */
 .isra-footer {
     height: 90px;
     margin-top: 15px;
@@ -180,6 +205,7 @@ ul {
     margin-top: 10px;
 }
 
+/* FORM STYLING */
 .isra-form {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -202,6 +228,11 @@ ul {
     color: #AE2626;
 }
 
+.isra-form .form-help-text {
+    color: #999;
+}
+
+/* ISRA CALENDAR STYLING */
 .isra-calendar {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -218,6 +249,7 @@ ul {
     margin-right: auto;
 }
 
+/* ISRA EVENTS STYLING */
 .isra-events .subheader {
     margin-bottom: 60px;
 }
