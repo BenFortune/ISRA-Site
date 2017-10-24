@@ -279,3 +279,24 @@ ul {
     margin-bottom: 15px;
     font-size: 16px;
 }
+
+/* ISRA BOARD MEMBERS STYLING */
+.isra-board-members .row {
+    margin-bottom: 30px;
+}
+
+.isra-board-members img {
+    height: 120px;
+    border-radius: 100%;
+}
+
+.isra-board-members p {
+    margin-bottom: 0
+}
+
+.isra-board-members p.isra-board-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
