@@ -8,55 +8,8 @@
         <link rel="stylesheet" href="dist/site.css">
     </head>
     <body>
-        <div class="container isra-header">
-            <div class="row">
-                <div class="col-sm-12">
-                    <a href="index.html"><img src="isra-logo.png" alt="ISRA Logo" /></a>
-                    <h1>Iowa Street Rod Association</h1>
-                    <p class="tagline">Cruisin since '71</p>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="calendar.html">Calendar</a></li>
-                                <li><a href="isra-events.html">ISRA Events</a></li>
-                                <li><a href="goodguys.html">Goodguys</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Members</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="members-rides.html">Member's Rides</a></li>
-                                <li><a href="membership.html">Membership</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" class="" href="#">About Us</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="history.html">History</a></li>
-                                <li><a href="board-members.html">Board Members</a></li>
-                                <li><a href="safety-program.html">Safety Program</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <isra-header></isra-header>
+        <isra-navbar></isra-navbar>
         <div class="isra-goodguys">
             <div class="container">
                 <div class="row">
@@ -103,25 +56,15 @@
                 </div>
             </div>
         </div>
-        <div class="isra-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img class="isra-logo img-responsive pull-left" src="isra-logo.png" alt="">
-                                <p>&#169; 2017 Iowa Street Rod Association</p>
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <a class="isra-fb" href="#"><img src="img/fb-lg.png" alt=""/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <isra-footer></isra-footer>
     </body>
     <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="dist/image-slider.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.3.0/riot+compiler.min.js"></script>
+    <script src="src/components/header.tag" type="riot/tag"></script>
+    <script src="src/components/navbar.tag" type="riot/tag"></script>
+    <script src="src/components/footer.tag" type="riot/tag"></script>
+    <script>
+        riot.mount('*')
+    </script>
 </html>

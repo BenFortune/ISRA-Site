@@ -4,13 +4,15 @@
   "description": "ISRA Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Opening ISRA Site \n\"; http-server -o -p4200 --cors"
   },
   "repository": "https://github.com/BenFortune/ISRA-Site",
   "author": "Ben Fortune",
   "email": "ben.fortune@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^0.10.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1"
   }
