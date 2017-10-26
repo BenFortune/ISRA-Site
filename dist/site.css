@@ -9,6 +9,12 @@ ul {
     list-style-type: none;
 }
 
+h2 {
+    color: #FC0;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 34px;
+}
+
 .btn.btn-primary {
     background-color: #AE2626;
     border-color: #891e1e;
@@ -269,8 +275,7 @@ ul {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
-    color: #FC0;
-    font-family: 'Racing Sans One', sans-serif;
+    color: #666;
     font-size: 32px;
 }
 
@@ -281,6 +286,16 @@ ul {
 }
 
 /* ISRA BOARD MEMBERS STYLING */
+.isra-board-members {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.isra-board-members h2 {
+    margin: 0;
+    padding: 20px 10px;
+}
+
 .isra-board-members .row {
     margin-bottom: 30px;
 }
