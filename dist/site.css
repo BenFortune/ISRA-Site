@@ -315,3 +315,14 @@ h2 {
     font-size: 20px;
     font-weight: bold;
 }
+
+/* ISRA SAFETY PROGRAM */
+.isra-safety-program {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../goodguys-loveland.jpg");
+    background-position: 0 -225px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
