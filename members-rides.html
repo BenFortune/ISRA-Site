@@ -15,93 +15,38 @@
             <div class="container">
                 <h2>Member's Rides</h2>
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-1-ride.jpg" alt="John and Jane Doe, 1932 Ford Coupe">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>John and Jane Doe</p>
-                                <p>Winterset, IA</p>
-                                <p>1932 Ford Coupe</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-2-ride.jpg" alt="Roger and Diane Roe, 1940 Ford Pickup">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>Roger and Diane Roe</p>
-                                <p>Ames, IA</p>
-                                <p>1940 Ford Pickup</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-3-ride.jpg" alt="Jimmy Shine, 1934 Ford Pickup">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>Jimmy Shine</p>
-                                <p>Spencer, IA</p>
-                                <p>1934 Ford Pickup</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-4-ride.jpg" alt="Dave Smith, 1959 Volkswagen Beetle">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>Dave Smith</p>
-                                <p>Waverly, IA</p>
-                                <p>1959 Volkswagen Beetle</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-5-ride.jpg" alt="Mike and Roxanne Johnson, 1950 Chevrolet">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>Mike and Roxanne Johnson</p>
-                                <p>Britt, IA</p>
-                                <p>1950 Chevrolet</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="isra-ride-card">
-                            <div class="isra-ride-image">
-                                <img class="isra-thumbnail img-responsive" src="img/members-rides/member-6-ride.jpg" alt="Jerry and Jill Thompson, 1970 Dodge Charger">
-                            </div>
-                            <div class="isra-ride-info">
-                                <p>Jerry and Jill Thompson</p>
-                                <p>Clinton, IA</p>
-                                <p>1970 Dodge Charger</p>
-                            </div>
-                        </div>
-                    </div>
+                    <isra-members-rides></isra-members-rides>
                 </div>
             </div>
         </div>
         <isra-footer></isra-footer>
+        <div id="modal-example" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </body>
     <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="rides-gallery.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.3.0/riot+compiler.min.js"></script>
     <script src="src/components/header.tag" type="riot/tag"></script>
     <script src="src/components/navbar.tag" type="riot/tag"></script>
     <script src="src/components/footer.tag" type="riot/tag"></script>
+    <script src="src/components/members-ride.tag" type="riot/tag"></script>
     <script>
         riot.mount('*')
     </script>
+    <!-- <script src="rides-gallery.js" charset="utf-8"></script> -->
 </html>
