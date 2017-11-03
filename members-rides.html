@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>ISRA - Members Rides</title>
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
         <link rel="stylesheet" href="dist/site.css">
     </head>
@@ -28,7 +27,7 @@
                         <h4 class="modal-title">Modal title</h4>
                     </div>
                     <div class="modal-body">
-                        <p>One fine body&hellip;</p>
+                        <img class="img-responsive" id="modal-image" src"#" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -40,13 +39,12 @@
     </body>
     <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.3.0/riot+compiler.min.js"></script>
+    <script src="node_modules/riot/riot+compiler.min.js"></script>
     <script src="src/components/header.tag" type="riot/tag"></script>
     <script src="src/components/navbar.tag" type="riot/tag"></script>
     <script src="src/components/footer.tag" type="riot/tag"></script>
     <script src="src/components/members-ride.tag" type="riot/tag"></script>
     <script>
-        riot.mount('*')
+        riot.mount('*');
     </script>
-    <!-- <script src="rides-gallery.js" charset="utf-8"></script> -->
 </html>

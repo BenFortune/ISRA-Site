@@ -1,13 +1,13 @@
 <isra-members-rides>
-    <div class="col-sm-4" each={rides}>
+    <div class="col-sm-4" each={ride, index in rides}>
         <div class="isra-ride-card">
             <div class="isra-ride-image">
-                <img class="isra-thumbnail img-responsive" src="{imgSrc}" alt="{name}, {car}">
+                <img class="isra-thumbnail img-responsive" src="{ride.imgSrc}" alt="{ride.name}, {ride.car}" id="ride{index}">
             </div>
             <div class="isra-ride-info">
-                <p>{name}</p>
-                <p>{location}</p>
-                <p>{car}</p>
+                <p>{ride.name}</p>
+                <p>{ride.location}</p>
+                <p>{ride.car}</p>
             </div>
         </div>
     </div>
@@ -51,32 +51,42 @@
                 'car': '1970 Dodge Charger'
             }
         ]
-        this.on('*', function(eventName) {
-            if (eventName === 'mount') {
-                var imgHeight = $('.isra-ride-image').height();
-                var imgGrp = $('.isra-ride-image');
+        this.on('*', function() {
+            if (this.isMounted) {
+                var containerHeight = 200;
+                var imgGrp = this.root.querySelectorAll('.isra-ride-image');
 
-                $.each(imgGrp, function(key, value) {
-                    var israMemberImage = $(this).find('img');
-                    console.log('israMemberImage', israMemberImage);
-                    var iHeight = israMemberImage.attr('src');
-                    console.log('iHeight', iHeight);
-                    var difference = imgHeight - iHeight;
-                    var paddingValues = difference / 2;
+                function centerImages() {
+                    for (var i = 0; i < imgGrp.length; i++) {
+                        var imageHeight = imgGrp[i].querySelector('img').offsetHeight;
+                        var difference = containerHeight - imageHeight;
+                        var paddingValues = difference / 2 + 'px';
+                        imgGrp[i].style.paddingTop = paddingValues;
+                        imgGrp[i].style.paddingBottom = paddingValues;
+                    }
+                }
 
-                    $(value).css('padding-top', paddingValues);
-                    $(value).css('padding-bottom', paddingValues);
-                });
+                function addEventListener(className, event, fn) {
+                    var list = document.querySelectorAll(className);
+                    for (var i = 0, len = list.length; i < len; i++) {
+                        list[i].addEventListener(event, function(e) {
+                            var imagePath = e.target.attributes.src.nodeValue;
+                            loadImageModal(imagePath);
+                        });
+                    }
+                }
 
                 function loadImageModal(imagePath) {
-                    console.log('imagePath', imagePath);
+                    document.getElementById('modal-image').setAttribute('src', imagePath);
                     $('#modal-example').modal('show');
                 };
 
-                $('.isra-thumbnail').on('click', function() {
-                    var imagePath = $(this).attr('src');
-                    loadImageModal(imagePath);
-                });
+                //TODO: Current hacky way of ensuring images have loaded; need a more elegant way of ensuring images have loaded.
+                setTimeout(function() {
+                    centerImages();
+                    addEventListener('.isra-thumbnail', 'click');
+                }, 500);
+
             }
         })
     </script>
