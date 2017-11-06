@@ -53,21 +53,29 @@
         ]
         this.on('*', function() {
             if (this.isMounted) {
-                var containerHeight = 200;
-                var imgGrp = this.root.querySelectorAll('.isra-ride-image');
+                var rootEl = this.root;
+
+                function setImagePadding(image) {
+                    var containerHeight = 200;
+                    var imageHeight = image.querySelector('img').offsetHeight;
+                    var difference = containerHeight - imageHeight;
+                    var paddingValues = difference / 2 + 'px';
+
+                    return paddingValues;
+                }
 
                 function centerImages() {
+                    var imgGrp = rootEl.querySelectorAll('.isra-ride-image');
+
                     for (var i = 0; i < imgGrp.length; i++) {
-                        var imageHeight = imgGrp[i].querySelector('img').offsetHeight;
-                        var difference = containerHeight - imageHeight;
-                        var paddingValues = difference / 2 + 'px';
+                        var paddingValues = setImagePadding(imgGrp[i]);
                         imgGrp[i].style.paddingTop = paddingValues;
                         imgGrp[i].style.paddingBottom = paddingValues;
                     }
                 }
 
                 function addEventListener(className, event, fn) {
-                    var list = document.querySelectorAll(className);
+                    var list = rootEl.querySelectorAll(className);
                     for (var i = 0, len = list.length; i < len; i++) {
                         list[i].addEventListener(event, function(e) {
                             var imagePath = e.target.attributes.src.nodeValue;
