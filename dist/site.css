@@ -26,7 +26,7 @@ h2 {
 
 .isra-header { margin-top: 30px; height: 125px; }
 .isra-header a { float:left; }
-.isra-header h1 { margin-left: 204px; margin-top: 25px; margin-bottom: 0; color: #A1241E; font-family: Sans-Serif; font-weight: bold;}
+.isra-header h1 { margin-left: 204px; margin-top: 25px; margin-bottom: 0; color: #A1241E; font-family: 'Shrikhand', cursive; font-weight: bold; font-size: 40px;}
 
 .navbar-default { margin-top: 15px; min-height: 25px; font-size: 15px;}
 
