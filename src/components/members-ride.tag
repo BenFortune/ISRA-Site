@@ -34,7 +34,7 @@
             },
             {
                 'imgSrc': 'img/members-rides/member-4-ride.jpg',
-                'name': 'Dave Smith',
+                'name': 'Larry Anderson',
                 'location': 'Waverly, IA',
                 'car': '1959 Volkswagen Beetle'
             },
@@ -78,14 +78,22 @@
                     var list = rootEl.querySelectorAll(className);
                     for (var i = 0, len = list.length; i < len; i++) {
                         list[i].addEventListener(event, function(e) {
+                            var rideInfo = e.target.alt;
                             var imagePath = e.target.attributes.src.nodeValue;
-                            loadImageModal(imagePath);
+                            loadImageModal(imagePath, rideInfo);
                         });
                     }
                 }
 
-                function loadImageModal(imagePath) {
+                function setModalButtons(imagePath) {
+                    var buttons = document.querySelectorAll('.modal-footer button');
+                    //TODO: Finish this method
+                }
+
+                function loadImageModal(imagePath, rideInfo) {
                     document.getElementById('modal-image').setAttribute('src', imagePath);
+                    document.querySelector('.modal-title').innerHTML = rideInfo;
+                    setModalButtons(imagePath);
                     $('#modal-example').modal('show');
                 };
 
