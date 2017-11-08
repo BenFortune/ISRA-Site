@@ -76,24 +76,32 @@
 
                 function addEventListener(className, event, fn) {
                     var list = rootEl.querySelectorAll(className);
-                    for (var i = 0, len = list.length; i < len; i++) {
+                    for (var i = 0; i < list.length; i++) {
                         list[i].addEventListener(event, function(e) {
+                            var imageNumber = e.srcElement.id.slice(-1);
                             var rideInfo = e.target.alt;
                             var imagePath = e.target.attributes.src.nodeValue;
-                            loadImageModal(imagePath, rideInfo);
+                            loadImageModal(imagePath, rideInfo, imageNumber);
                         });
                     }
                 }
 
-                function setModalButtons(imagePath) {
-                    var buttons = document.querySelectorAll('.modal-footer button');
-                    //TODO: Finish this method
+                function setModalButtons(imageNumber) {
+                    console.log(imageNumber);
                 }
 
-                function loadImageModal(imagePath, rideInfo) {
+                function addModalButtonEvents(imagePath, imageNumber) {
+                    var buttons = document.querySelectorAll('.modal-footer button');
+                    for (var i = 0; i < buttons.length; i++) {
+                        // TODO: figure out passing in proper parameters/variables
+                        // buttons[i].addEventListener('click', setModalButtons.bind(e, imageNumber), false);
+                    }
+                }
+
+                function loadImageModal(imagePath, rideInfo, imageNumber, imageNumber) {
                     document.getElementById('modal-image').setAttribute('src', imagePath);
                     document.querySelector('.modal-title').innerHTML = rideInfo;
-                    setModalButtons(imagePath);
+                    addModalButtonEvents(imagePath, imageNumber);
                     $('#modal-example').modal('show');
                 };
 
