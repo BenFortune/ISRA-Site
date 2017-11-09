@@ -13,6 +13,7 @@
     </div>
 
     <script>
+        //TODO: move rides json into a separate riot template
         this.rides = [
             {
                 'imgSrc': 'img/members-rides/member-1-ride.jpg',
@@ -86,24 +87,35 @@
                     }
                 }
 
-                function setModalButtons(imageNumber) {
-                    console.log(imageNumber);
-                }
-
-                function addModalButtonEvents(imagePath, imageNumber) {
-                    var buttons = document.querySelectorAll('.modal-footer button');
-                    for (var i = 0; i < buttons.length; i++) {
-                        // TODO: figure out passing in proper parameters/variables
-                        // buttons[i].addEventListener('click', setModalButtons.bind(e, imageNumber), false);
-                    }
-                }
-
-                function loadImageModal(imagePath, rideInfo, imageNumber, imageNumber) {
+                function loadImageModal(imagePath, rideInfo, imageNumber) {
                     document.getElementById('modal-image').setAttribute('src', imagePath);
                     document.querySelector('.modal-title').innerHTML = rideInfo;
                     addModalButtonEvents(imagePath, imageNumber);
                     $('#modal-example').modal('show');
                 };
+
+
+                function setWhichImageToGoTo(imageNumber) {
+                    //TODO: Add logic to determine which direction to go
+                    moveImage();
+                }
+
+                function moveImage() {
+                    console.log('moveImageCalled');
+                }
+
+                function setImageNumber(imageNumber) {
+                    var imageNumber = parseInt(imageNumber) + 1;
+
+                    return imageNumber;
+                }
+
+                function addModalButtonEvents(imagePath, imageNumber) {
+                    var buttons = document.querySelectorAll('.modal-footer button');
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].addEventListener('click', setWhichImageToGoTo.bind(null, setImageNumber(imageNumber)));
+                    }
+                }
 
                 //TODO: Current hacky way of ensuring images have loaded; need a more elegant way of ensuring images have loaded.
                 setTimeout(function() {
