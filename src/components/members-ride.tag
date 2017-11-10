@@ -90,18 +90,59 @@
                 function loadImageModal(imagePath, rideInfo, imageNumber) {
                     document.getElementById('modal-image').setAttribute('src', imagePath);
                     document.querySelector('.modal-title').innerHTML = rideInfo;
-                    addModalButtonEvents(imagePath, imageNumber);
+                    addModalButtonEvents(imagePath, setImageNumber(imageNumber));
                     $('#modal-example').modal('show');
                 };
 
+                function verifyNotAtEnd(el, imageNumber) {
+                    console.log('verifyNotAtEnd', el, imageNumber);
+                    var imageGroupLength = rootEl.querySelectorAll('.isra-ride-image').length;
 
-                function setWhichImageToGoTo(imageNumber) {
-                    //TODO: Add logic to determine which direction to go
-                    moveImage();
+                    if (imageNumber === imageGroupLength) {
+                        console.log('image at end');
+                        el.setAttribute('disabled', true);
+                        return;
+                    } else {
+                        el.removeAttribute('disabled');
+                        return imageNumber + 1;
+                    }
                 }
 
-                function moveImage() {
-                    console.log('moveImageCalled');
+                function verifyNotAtBeginning(el, imageNumber) {
+                    console.log('verifyNotAtBeginning', el, imageNumber);
+                    if (imageNumber - 1 === -1) {
+                        console.log('image at beginning');
+                        el.setAttribute('disabled', true);
+                        return;
+                    } else {
+                        el.removeAttribute('disabled');
+                        return imageNumber - 1;
+                    }
+
+                }
+
+                function setWhichImageToGoTo(el, imageNumber) {
+                    var newImageNumber;
+                    var imageClass = el.className;
+                    console.log('rides length', rootEl.querySelectorAll('.isra-ride-image').length);
+                    if (imageClass.indexOf('next-image') != -1) {
+                        newImageNumber = verifyNotAtEnd(el, imageNumber);
+                    } else {
+                        newImageNumber = verifyNotAtBeginning(el, imageNumber);
+                    }
+
+                    moveImage(newImageNumber);
+                }
+
+                function getNewImageSource(newImageNumber) {
+                    return 'img/members-rides/member-' + newImageNumber + '-ride.jpg'
+                }
+
+                function moveImage(newImageNumber) {
+                    console.log('move image called', newImageNumber);
+                    var imageSrc = getNewImageSource(newImageNumber);
+                    document.getElementById('modal-image').setAttribute('src', imageSrc);
+                    addModalButtonEvents(imageSrc, newImageNumber);
                 }
 
                 function setImageNumber(imageNumber) {
@@ -113,7 +154,11 @@
                 function addModalButtonEvents(imagePath, imageNumber) {
                     var buttons = document.querySelectorAll('.modal-footer button');
                     for (var i = 0; i < buttons.length; i++) {
-                        buttons[i].addEventListener('click', setWhichImageToGoTo.bind(null, setImageNumber(imageNumber)));
+                        buttons[i].removeAttribute('disabled');
+                        buttons[i].addEventListener('click', function(e) {
+                            var el = e.target;
+                            setWhichImageToGoTo(el, imageNumber);
+                        });
                     }
                 }
 
