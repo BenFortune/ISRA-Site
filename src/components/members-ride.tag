@@ -55,6 +55,7 @@
         this.on('*', function() {
             if (this.isMounted) {
                 var rootEl = this.root;
+                var ridesArray = this.rides;
 
                 function setImagePadding(image) {
                     var containerHeight = 200;
@@ -95,13 +96,9 @@
                 };
 
                 function verifyNotAtEnd(el, imageNumber) {
-                    console.log('verifyNotAtEnd', el, imageNumber);
-                    var imageGroupLength = rootEl.querySelectorAll('.isra-ride-image').length;
-
-                    if (imageNumber === imageGroupLength) {
-                        console.log('image at end');
+                    if (imageNumber === ridesArray.length) {
                         el.setAttribute('disabled', true);
-                        return;
+                        return undefined;
                     } else {
                         el.removeAttribute('disabled');
                         return imageNumber + 1;
@@ -109,11 +106,9 @@
                 }
 
                 function verifyNotAtBeginning(el, imageNumber) {
-                    console.log('verifyNotAtBeginning', el, imageNumber);
                     if (imageNumber - 1 === -1) {
-                        console.log('image at beginning');
                         el.setAttribute('disabled', true);
-                        return;
+                        return undefined;
                     } else {
                         el.removeAttribute('disabled');
                         return imageNumber - 1;
@@ -124,7 +119,6 @@
                 function setWhichImageToGoTo(el, imageNumber) {
                     var newImageNumber;
                     var imageClass = el.className;
-                    console.log('rides length', rootEl.querySelectorAll('.isra-ride-image').length);
                     if (imageClass.indexOf('next-image') != -1) {
                         newImageNumber = verifyNotAtEnd(el, imageNumber);
                     } else {
@@ -134,19 +128,21 @@
                     moveImage(newImageNumber);
                 }
 
-                function getNewImageSource(newImageNumber) {
-                    return 'img/members-rides/member-' + newImageNumber + '-ride.jpg'
-                }
-
                 function moveImage(newImageNumber) {
                     console.log('move image called', newImageNumber);
-                    var imageSrc = getNewImageSource(newImageNumber);
-                    document.getElementById('modal-image').setAttribute('src', imageSrc);
-                    addModalButtonEvents(imageSrc, newImageNumber);
+                    if (newImageNumber !== undefined && newImageNumber < ridesArray.length) {
+                        // TODO: define the following function and replace setting everything in this
+                        // setNewRideInfo(newImageNumber);
+                        document.getElementById('modal-image').setAttribute('src', ridesArray[newImageNumber].imgSrc);
+                        document.getElementById('isra-ride-title').innerHTML = ridesArray[newImageNumber].name + ', ' + ridesArray[newImageNumber].car
+                        addModalButtonEvents(imageSrc, newImageNumber);
+                    } else {
+                        console.log('dont move it');
+                    }
                 }
 
                 function setImageNumber(imageNumber) {
-                    var imageNumber = parseInt(imageNumber) + 1;
+                    var imageNumber = parseInt(imageNumber);
 
                     return imageNumber;
                 }
