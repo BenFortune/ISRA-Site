@@ -91,7 +91,7 @@
                 function loadImageModal(imagePath, rideInfo, imageNumber) {
                     document.getElementById('modal-image').setAttribute('src', imagePath);
                     document.querySelector('.modal-title').innerHTML = rideInfo;
-                    addModalButtonEvents(imagePath, setImageNumber(imageNumber));
+                    addModalButtonEvents(setImageNumber(imageNumber));
                     $('#modal-example').modal('show');
                 };
 
@@ -122,20 +122,23 @@
                     if (imageClass.indexOf('next-image') != -1) {
                         newImageNumber = verifyNotAtEnd(el, imageNumber);
                     } else {
-                        newImageNumber = verifyNotAtBeginning(el, imageNumber);
+                        // newImageNumber = verifyNotAtBeginning(el, imageNumber);
+                        newImageNumber = imageNumber - 1;
                     }
 
                     moveImage(newImageNumber);
                 }
 
+                function setNewRideInfo(newImageNumber) {
+                    document.getElementById('modal-image').setAttribute('src', ridesArray[newImageNumber].imgSrc);
+                    document.getElementById('isra-ride-title').innerHTML = ridesArray[newImageNumber].name + ', ' + ridesArray[newImageNumber].car;
+                }
+
                 function moveImage(newImageNumber) {
                     console.log('move image called', newImageNumber);
                     if (newImageNumber !== undefined && newImageNumber < ridesArray.length) {
-                        // TODO: define the following function and replace setting everything in this
-                        // setNewRideInfo(newImageNumber);
-                        document.getElementById('modal-image').setAttribute('src', ridesArray[newImageNumber].imgSrc);
-                        document.getElementById('isra-ride-title').innerHTML = ridesArray[newImageNumber].name + ', ' + ridesArray[newImageNumber].car
-                        addModalButtonEvents(imageSrc, newImageNumber);
+                        setNewRideInfo(newImageNumber);
+                        removeModalButtonEvents(newImageNumber);
                     } else {
                         console.log('dont move it');
                     }
@@ -147,7 +150,7 @@
                     return imageNumber;
                 }
 
-                function addModalButtonEvents(imagePath, imageNumber) {
+                function addModalButtonEvents(imageNumber) {
                     var buttons = document.querySelectorAll('.modal-footer button');
                     for (var i = 0; i < buttons.length; i++) {
                         buttons[i].removeAttribute('disabled');
@@ -156,6 +159,16 @@
                             setWhichImageToGoTo(el, imageNumber);
                         });
                     }
+                }
+
+                function removeModalButtonEvents(imageNumber) {
+                    var buttons = document.querySelectorAll('.modal-footer button');
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].removeEventListener('click', function() {
+                            console.log('removeEventListener', buttons[i]);
+                        });
+                    }
+                    addModalButtonEvents(imageNumber);
                 }
 
                 //TODO: Current hacky way of ensuring images have loaded; need a more elegant way of ensuring images have loaded.
