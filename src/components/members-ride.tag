@@ -155,22 +155,11 @@
                     for (var i = 0; i < buttons.length; i++) {
                         buttons[i].removeAttribute('disabled');
                         buttons[i].addEventListener('click', function(e) {
-                            var el = e.target;
-                            setWhichImageToGoTo(el, imageNumber);
-                        });
+                            setWhichImageToGoTo(e.target, imageNumber)
+                        }, false);
                     }
                 }
-
-                function removeModalButtonEvents(imageNumber) {
-                    var buttons = document.querySelectorAll('.modal-footer button');
-                    for (var i = 0; i < buttons.length; i++) {
-                        buttons[i].removeEventListener('click', function() {
-                            console.log('removeEventListener', buttons[i]);
-                        });
-                    }
-                    addModalButtonEvents(imageNumber);
-                }
-
+                
                 //TODO: Current hacky way of ensuring images have loaded; need a more elegant way of ensuring images have loaded.
                 setTimeout(function() {
                     centerImages();

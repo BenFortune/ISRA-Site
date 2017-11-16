@@ -115,6 +115,15 @@ h2 {
     margin-bottom: 30px;
 }
 
+.isra-events-section .more-events {
+    display: none;
+}
+
+/* TODO: Get rid of this */
+#isra-all-events {
+    display: none;
+}
+
 /* ISRA HOMEPAGE RIDES GALLERY */
 .isra-rides-gallery {
     position: relative;
