@@ -115,7 +115,8 @@ h2 {
     margin-bottom: 30px;
 }
 
-.isra-events-section .more-events {
+/* TODO: Get rid of this */
+#isra-more-events {
     display: none;
 }
 
