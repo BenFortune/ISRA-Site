@@ -17,6 +17,7 @@
                             <li><a href="calendar.html">Calendar</a></li>
                             <li><a href="isra-events.html">ISRA Events</a></li>
                             <li><a href="goodguys.html">Goodguys</a></li>
+                            <li><a href="nsra.html">NSRA</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

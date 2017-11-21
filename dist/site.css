@@ -1,5 +1,3 @@
-/*@import './partials/_nav.scss';*/
-
 /* GLOBAL STYLING */
 body { font-family: Sans-Serif; color: #333; font-size: 18px; list-style-type: none;}
 /* font-family: Sans-Serif; */
@@ -81,7 +79,17 @@ h2 {
     background-size:100% auto;
 }
 
-.isra-homepage-info-section h2, .isra-goodguys h2, .isra-history h2 {
+.isra-nsra {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../nsra.jpg");
+    background-position: 0 -300px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-homepage-info-section h2, .isra-goodguys h2, .isra-history h2, .isra-nsra h2 {
     margin-top: 0;
     color: #FC0;
     font-family: 'Racing Sans One', sans-serif;
