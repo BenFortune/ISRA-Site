@@ -1,0 +1,31 @@
+body {
+  font-family: Sans-Serif;
+  color: #333;
+  font-size: 18px;
+  list-style-type: none; }
+
+ul {
+  padding-left: 0;
+  list-style-type: none; }
+
+h2 {
+  color: #FC0;
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 34px; }
+
+.btn.btn-primary {
+  background-color: #AE2626;
+  border-color: #891e1e; }
+
+.btn.btn-primary:hover {
+  background-color: #7a1a1a; }
+
+.navbar {
+  margin-bottom: 0; }
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0; }
+
+h1 {
+  color: red; }

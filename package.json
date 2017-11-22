@@ -1,22 +1,26 @@
 {
-  "name": "isra-site",
-  "version": "1.0.0",
-  "description": "ISRA Website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "echo \"Opening ISRA Site \n\"; http-server -o -p4200 --cors"
-  },
-  "repository": "https://github.com/BenFortune/ISRA-Site",
-  "author": "Ben Fortune",
-  "email": "ben.fortune@gmail.com",
-  "license": "ISC",
-  "devDependencies": {
-    "http-server": "^0.10.0",
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
-  },
-  "dependencies": {
-    "riot": "^3.7.3"
-  }
+    "name": "isra-site",
+    "version": "1.0.0",
+    "description": "ISRA Website",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "echo \"Build and compile files\"; webpack",
+        "start": "echo \"Opening ISRA Site \n\"; http-server -o -p4200 --cors"
+    },
+    "repository": "https://github.com/BenFortune/ISRA-Site",
+    "author": "Ben Fortune",
+    "email": "ben.fortune@gmail.com",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "css-loader": "^0.28.7",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "http-server": "^0.10.0",
+        "jquery": "^3.2.1",
+        "node-sass": "^4.7.2",
+        "riot": "^3.7.3",
+        "sass-loader": "^6.0.6",
+        "webpack": "^3.8.1"
+    }
 }
