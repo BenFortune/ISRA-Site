@@ -1,4 +1,4 @@
-// test: /\.scss$/
+@import './_vars.scss';
 
 body {
     font-family: Sans-Serif;
@@ -27,11 +27,6 @@ h2 {
     background-color: #7a1a1a;
 }
 
-.navbar {
-    margin-bottom: 0;
-}
-
-.navbar-collapse {
-  padding-left: 0;
-  padding-right: 0;
+.isra-subheader {
+    color: #999;
 }

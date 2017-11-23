@@ -1,0 +1,16 @@
+@import './_vars.scss';
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    margin-top: 15px;
+    min-height: 25px;
+    font-size: 15px;
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
