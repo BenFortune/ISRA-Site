@@ -1,0 +1,155 @@
+@import './_vars.scss';
+
+.isra-homepage-info-section {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../goodguys-shot.jpg");
+    background-position: 0 -175px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-goodguys {
+    position: relative;
+    height: 800px;
+    min-height: 800px;
+    background-image: url("../goodguys-shot-2.jpg");
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-history {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../goodguys-shot-3.jpg");
+    background-position: 0 -175px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-nsra {
+    position: relative;
+    height: 600px;
+    min-height: 600px;
+    background-image: url("../nsra.jpg");
+    background-position: 0 -300px;
+    background-repeat: no-repeat;
+    background-size:100% auto;
+}
+
+.isra-homepage-info-section h2, .isra-goodguys h2, .isra-history h2, .isra-nsra h2 {
+    margin-top: 0;
+    color: #FC0;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 52px;
+}
+
+.isra-mask {
+    margin-top: 50px;
+    padding: 25px 50px;
+    height: 500px;
+    min-height: 500px;
+    background-color: #333;
+    color: #E9E9E9;
+    opacity: .8
+}
+
+.isra-events-section {
+    padding-top: 30px;
+    padding-bottom: 48px;
+    border-top: 2px solid #E7E7E7;
+    border-bottom: 2px solid #E7E7E7;
+
+    .container .col-sm-12 ul {
+        list-style-type: none;
+    }
+
+    .container .col-sm-12 li {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* TODO: Get rid of this */
+#isra-more-events {
+    display: none;
+}
+
+/* TODO: Get rid of this */
+#isra-all-events {
+    display: none;
+}
+
+.isra-rides-gallery {
+    position: relative;
+    height: 800px;
+    max-height: 800px;
+    overflow: hidden;
+    background: #F8F8F8 none;
+    border-bottom: 2px solid #E7E7E7;
+
+    h2 {
+        margin: 0;
+        padding: 20px 10px;
+        font-family: 'Racing Sans One', sans-serif;
+    }
+
+    button {
+        margin-top: 350px;
+        padding: 10px;
+        font-size: 28px;
+        position: relative;
+        z-index: 8888;
+        color: #FFF;
+        background: #666 none;
+        opacity: .8;
+    }
+
+    button:hover, button:focus {
+        margin-top: 350px;
+        padding: 10px;
+        font-size: 28px;
+        position: relative;
+        z-index: 8888;
+        color: #FFF;
+        text-decoration: none;
+        background: #666 none;
+        opacity: .8;
+        outline: none;
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+
+        li {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+    }
+
+    img {
+        width: 100%;
+        max-height: 800px;
+    }
+
+    .col-sm-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.isra-membership-link {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}

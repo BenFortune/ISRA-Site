@@ -1,0 +1,17 @@
+@import './_vars.scss';
+
+.isra-calendar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .isra-calendar-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    iframe {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,38 @@
+@import './_vars.scss';
+
+.isra-members-rides {
+    p {
+        margin-bottom: 0;
+    }
+
+    .isra-ride-card {
+        margin-bottom: 30px;
+    }
+
+    .isra-ride-info {
+        margin-top: 10px;
+    }
+
+    .isra-thumbnail {
+        display: block;
+        width: 240px;
+        max-height: 200px;
+        padding: 5px;
+        background-color: #FFF none;
+        border: #AAA solid 2px;
+        -webkit-box-shadow: 1px 1px 2px 2px #DDD;
+        -moz-box-shadow:    1px 1px 2px 2px #DDD;
+        box-shadow:         1px 1px 2px 2px #DDD;
+        cursor: pointer;
+    }
+
+    .isra-ride-image {
+        height: 200px;
+        max-height: 200px;
+    }
+}
+
+
+.modal-body {
+    padding: 0;
+}
