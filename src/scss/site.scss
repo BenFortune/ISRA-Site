@@ -1,5 +1,8 @@
 @import './partials/_global.scss';
-
-h1 {
-    color: red;
-}
+@import './partials/_header.scss';
+@import './partials/_navbar.scss';
+@import './partials/_homepage.scss';
+@import './partials/_forms.scss';
+@import './partials/_calendar.scss';
+@import './partials/_members-rides.scss';
+@import './partials/_board-members.scss';

@@ -35,7 +35,7 @@ h2 {
     font-weight: 100;
 }
 
-.subheader {
+.isra-subheader {
     color: #999;
 }
 
@@ -274,7 +274,7 @@ h2 {
 }
 
 /* ISRA EVENTS STYLING */
-.isra-events .subheader {
+.isra-events .isra-subheader {
     margin-bottom: 60px;
 }
 
