@@ -21,6 +21,7 @@
         "node-sass": "^4.11.0",
         "riot": "^3.13.2",
         "sass-loader": "^6.0.7",
+        "tar": "4.4.2",
         "webpack": "^3.12.0"
     },
     "devDependencies": {
