@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/scss/site.scss',
@@ -11,16 +12,21 @@ module.exports = {
             Javascript stuff goes here
             */
             {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({
-                    use: 'css-loader?importLoaders=1',
-                }),
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader'],
+                })
             },
             {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
+                test: /\.(png|jp(e*)g|svg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8000,
+                        name: 'img/[hash]-[name].[ext]'
+                    }
+                }]
             }
         ]
     },
@@ -29,5 +35,9 @@ module.exports = {
             filename: 'dist/styles.bundle.css',
             allChunks: true,
         }),
+        new CopyWebpackPlugin([{
+            from: 'img',
+            to: 'dist/img'
+        }]),
     ],
 };

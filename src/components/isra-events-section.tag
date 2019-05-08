@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2>Upcoming Events</h2>
+                    <h2>Upcoming ISRA Events</h2>
                     <ul>
                         <li class="row">
                             <div class="col-sm-12">

@@ -17,7 +17,7 @@
         this.rides = [
             {
                 'imgSrc': 'img/members-rides/member-1-ride.jpg',
-                'name': 'John and John Doe',
+                'name': 'John and Jane Doe',
                 'location': 'Winterset, IA',
                 'car': '1932 Ford Coupe'
             },
@@ -125,7 +125,6 @@
                         // newImageNumber = verifyNotAtBeginning(el, imageNumber);
                         newImageNumber = imageNumber - 1;
                     }
-
                     moveImage(newImageNumber);
                 }
 
@@ -137,8 +136,7 @@
                 function moveImage(newImageNumber) {
                     console.log('move image called', newImageNumber);
                     if (newImageNumber !== undefined && newImageNumber < ridesArray.length) {
-                        setNewRideInfo(newImageNumber);
-                        removeModalButtonEvents(newImageNumber);
+                        setNewRideInfo(newImageNumber)
                     } else {
                         console.log('dont move it');
                     }
@@ -159,7 +157,7 @@
                         }, false);
                     }
                 }
-                
+
                 //TODO: Current hacky way of ensuring images have loaded; need a more elegant way of ensuring images have loaded.
                 setTimeout(function() {
                     centerImages();

@@ -1,0 +1,24 @@
+/* ISRA FOOTER STYLING */
+.isra-footer {
+    height: 90px;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #999;
+    background: #F8F8F8 none;
+    border-top: 2px solid #E7E7E7;
+
+    .isra-logo {
+        max-height: 50px;
+        margin-right: 20px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+
+    .isra-fb {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
